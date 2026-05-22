@@ -293,9 +293,10 @@ function toggleOver(key,hdr){
 
 function runBadge(b){
   if(b.wk)return`<span class="run-badge run-w">W</span>`;
-  const r=b.br;
-  const cls=r===4?'run-4':r===6?'run-6':r===0?'run-0':r===3?'run-3':'run-'+(r<=2?r:2);
-  return`<span class="run-badge ${cls}">${r}</span>`;
+  const display=b.r;
+  const colorRef=b.br;
+  const cls=colorRef===4?'run-4':colorRef===6?'run-6':display===0?'run-0':colorRef===3?'run-3':'run-'+(colorRef<=2?colorRef:2);
+  return`<span class="run-badge ${cls}">${display}</span>`;
 }
 
 function extrasTag(b){
